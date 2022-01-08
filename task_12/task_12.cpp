@@ -65,7 +65,7 @@ int main()
         }
     }
 
-    sort_arr(&arr[0][0][0], size, 3);
+    sort_arr(**arr, size, 3);
 
     //for (int i = 0; i < ROWS; i++) {          // Вывод трехмерного массива
     //    for (int j = 0; j < COLN; j++) {
