@@ -83,8 +83,8 @@ int main()
         //cout << enrolleeDataArr[i].fio;
         DeleteSpace(enrolleeDataArr[i].fio);
         fin >> enrolleeDataArr[i].recordBook;
-        for (int i = 0; i < 3; i++) {
-            fin >> tempArr[i];
+        for (int j = 0; j < 3; j++) {
+            fin >> tempArr[j];
         }
         enrolleeDataArr[i].averageScore = ConsiderAverageScore(tempArr);
         fin.getline(T, 256);
@@ -93,7 +93,7 @@ int main()
     SortArray(enrolleeDataArr);
 
     for (int i = 0; i < 4; i++) {
-        cout << enrolleeDataArr[i].fio << enrolleeDataArr[i].recordBook << '\t' << setprecision(4) << enrolleeDataArr[i].averageScore << endl; // Вывод данных
+        cout << enrolleeDataArr[i].fio << '\t' << enrolleeDataArr[i].recordBook << '\t' << setprecision(4) << enrolleeDataArr[i].averageScore << endl; // Вывод данных
     }
     
 }
