@@ -21,7 +21,7 @@ const int SIZE_ARR = 4;
 struct BookInfo {
     char bookName[25];
     char author[35];
-    int year;
+    unsigned int year;
     char publishing[20];
 };
 
@@ -62,8 +62,6 @@ int main()
         cout << "[ERROR] File was not opened" << endl;
         exit(0);
     }
-
-    char buff[256];
 
     for (int i = 0; i < SIZE_ARR; i++) {
         fin.get(libraryData[i].bookName, 25);
