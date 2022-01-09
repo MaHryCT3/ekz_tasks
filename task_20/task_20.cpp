@@ -92,7 +92,7 @@ int main()
         DeleteSpace(groupArr[i].fio);
     }
 
-    cout << "Cтипенднальнsq фонда группы изменился на " << ChangeScholarshipFund(groupArr);
+    cout << "Cтипенднальный фонда группы изменился на " << ChangeScholarshipFund(groupArr);
     
     //for (int i = 0; i < SIZE_ARR; i++) {
     //    cout << groupArr[i].fio << '\t';
