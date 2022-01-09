@@ -71,4 +71,6 @@ int main()
 
     cout << "\nВывод массива:\n";
     for (int i = 0; i < newArrSize; i++) cout << result_arr[i] << '\t';
+
+    delete[] result_arr; // очищаем память
 }
