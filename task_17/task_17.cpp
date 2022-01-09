@@ -1,8 +1,7 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
-#include <windows.h>
+﻿#include <windows.h>
 #include <iostream>
 #include <fstream>
-#include <string.h>
+#include <iomanip>
 
 
 /*Задача 17
@@ -94,7 +93,7 @@ int main()
     SortArray(enrolleeDataArr);
 
     for (int i = 0; i < 4; i++) {
-        cout << enrolleeDataArr[i].fio << '\t' << enrolleeDataArr[i].recordBook << '\t' << enrolleeDataArr[i].averageScore << endl; // Вывод данных
+        cout << enrolleeDataArr[i].fio << enrolleeDataArr[i].recordBook << '\t' << setprecision(4) << enrolleeDataArr[i].averageScore << endl; // Вывод данных
     }
     
 }
