@@ -17,7 +17,7 @@ int** new_matrix(int rows, int cols) {
     return arr;
 }
 
-int** GetArray(int& sum, int& prod) {
+int** GetArray(int& sum, int& prod, int& rows, int& cols) {
     int rows, cols;
     cout << "Введите количество строк в массиве: "; cin >> rows;
     cout << "Введите количество столбцов в массиве: "; cin >> cols;
@@ -54,10 +54,13 @@ int main()
    
     int sum = 0;
     int prod = 1;
-    int** new_arr = GetArray(sum, prod);
+    int rows, cols;
+    int** new_arr = GetArray(sum, prod, rows, cols);
 
     cout << "Сумма: " << sum << "\nПроизведение: " << prod << endl;
 
+    for (int i = 0; i < rows; i++) 
+        delete new_arr[i];               // очищаем памяти
     delete[] new_arr;
 }
 
